@@ -49,7 +49,42 @@
       "id": 4
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "info": [
+    {
+      "truckPlate": "06/29/22 15:03:58",
+      "cargoType": "0",
+      "driver": "2295",
+      "truckType": "0",
+      "price": "16",
+      "dimension": "230129",
+      "parkingAddress": "2212",
+      "productionYear": "2012",
+      "status": "In-used",
+      "id": 1
+    },
+    {
+      "truckPlate": "06/29/22 15:03:59",
+      "cargoType": "0",
+      "driver": "2293",
+      "truckType": "0",
+      "price": "16",
+      "dimension": "230129",
+      "parkingAddress": "2212",
+      "productionYear": "2010",
+      "status": "New",
+      "id": 2
+    },
+    {
+      "truckPlate": "06/29/22 15:04:01",
+      "cargoType": "0",
+      "driver": "2293",
+      "truckType": "0",
+      "price": "16",
+      "dimension": "230129",
+      "parkingAddress": "2212",
+      "productionYear": "2011",
+      "status": "Suspended",
+      "id": 3
+    }
+  ]
 }

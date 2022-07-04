@@ -51,6 +51,7 @@ const rootReducer = combineReducers({
     CargoReducer: CargoReducer,
     UserReducer: UserReducer,
     InfoReducer: InfoReducer
+
 });
     
 export default rootReducer;

@@ -79,6 +79,8 @@ const makeStyle1=(status)=>{
 }
 
 
+
+
 const BasicTable =({ contacts, deleteContact }) => {
   const [user, setUser] = useState();
 
@@ -120,11 +122,11 @@ const BasicTable =({ contacts, deleteContact }) => {
 
   }
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch({type: "GET_ALL_INFO"})
   }, []);
-
-  const dispatch = useDispatch();
 
   const {dataInfo, isLoading} = useSelector(state => state.InfoReducer)
   console.log('123', dataInfo)
@@ -140,10 +142,11 @@ const BasicTable =({ contacts, deleteContact }) => {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell align="left">Thời gian</TableCell>
-                <TableCell align="left">Điện năng tiêu thụ</TableCell>
+                <TableCell align="left">Id</TableCell>
+                <TableCell align="left">Truck plate</TableCell>
+                <TableCell align="left">Cargo Type</TableCell>
                 <TableCell align="left">Điện áp</TableCell>
-                <TableCell align="left">Dòng điện chạy qua</TableCell>
+                <TableCell align="left">Truck Type</TableCell>
                 <TableCell align="left">Dòng điện</TableCell>
                 <TableCell align="left">ID</TableCell>
                 <TableCell align="left">Công tơ</TableCell>
@@ -159,12 +162,13 @@ const BasicTable =({ contacts, deleteContact }) => {
                   key={id}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
+                  <TableCell align="left">{contact.id + 1}</TableCell>
                   <TableCell component="th" scope="row">
                     {contact.truckPlate}
                   </TableCell>
                   <TableCell align="left">{contact.cargoType}</TableCell>
                   <TableCell align="left">{contact.driver}</TableCell>
-                  <TableCell align="left">{contact.truckType}</TableCell>
+                  <TableCell align="left">{contact.truckType} tons</TableCell>
                   <TableCell align="left">{contact.price}</TableCell>
                   <TableCell align="left">{contact.dimension}</TableCell>
                   <TableCell align="left">{contact.parkingAddress}</TableCell>
